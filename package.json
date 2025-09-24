@@ -1,0 +1,21 @@
+{
+  "name": "cit-class-node",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nyan7natsu/cit-class-node.git"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "pnpm build"
+  },
+  "keywords": [],
+  "author": "nyan7natsu",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^5.8.3"
+  }
+}
