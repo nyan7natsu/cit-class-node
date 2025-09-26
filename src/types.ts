@@ -82,7 +82,7 @@ export type ClassData = {
   kyoinName: string;
 
   /** 教室名 */
-  kyoustName: string | null;
+  kyostName: string | null;
 
   keijiMidokCnt: number;
 };
