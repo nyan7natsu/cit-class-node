@@ -1,5 +1,7 @@
 const CIT_PORTAL_URL = "https://portal.it-chiba.ac.jp";
 const UPRX_WEBAPI = "/uprx/webapi/up";
+const MAINTENANCE_MESSAGE =
+  "申し訳ございません。ただいまサービス停止中です。（毎日 AM2：00～5：00）";
 
 import { LoginResponse, ClassScheduleResponse } from "./types";
 
@@ -47,6 +49,15 @@ export class CITClass {
         }),
       });
       const body = decodeURIComponent(await resp.text());
+      if (resp.status === 503 || body.includes(MAINTENANCE_MESSAGE)) {
+        return {
+          statusDto: {
+            success: false,
+            messageList: ["現在CITポータルは定期メンテナンス中です"],
+          },
+          data: null,
+        };
+      }
       const data: LoginResponse = JSON.parse(body);
       return data;
     } catch (e) {
@@ -114,6 +125,15 @@ export class CITClass {
         }),
       });
       const body = decodeURIComponent(await resp.text());
+      if (resp.status === 503 || body.includes(MAINTENANCE_MESSAGE)) {
+        return {
+          statusDto: {
+            success: false,
+            messageList: ["現在CITポータルは定期メンテナンス中です"],
+          },
+          data: null,
+        };
+      }
       const data: ClassScheduleResponse = JSON.parse(body);
       return data;
     } catch (e) {
