@@ -1,4 +1,4 @@
-const CIT_PORTAL_URL = "https://portal.it-chiba.ac.jp";
+const CIT_PORTAL_URL = "https://portal.chibatech.ac.jp";
 const UPRX_WEBAPI = "/uprx/webapi/up";
 const MAINTENANCE_MESSAGE =
   "申し訳ございません。ただいまサービス停止中です。（毎日 AM2：00～5：00）";
