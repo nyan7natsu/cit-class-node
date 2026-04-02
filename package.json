@@ -16,6 +16,6 @@
   "author": "nyan7natsu",
   "license": "MIT",
   "dependencies": {
-    "typescript": "^5.8.3"
+    "typescript": "^6"
   }
 }
